@@ -15083,6 +15083,89 @@
         },
         "location": "learningenglish.ts",
         "module": "() => import('@/routes/bbc/learningenglish.ts')"
+      },
+      "/sport/:sport": {
+        "path": "/sport/:sport",
+        "name": "Sport",
+        "maintainers": [
+          "TonyRL"
+        ],
+        "example": "/bbc/sport/formula1",
+        "parameters": {
+          "sport": "The sport to fetch news for, can be found in the URL."
+        },
+        "radar": [
+          {
+            "source": [
+              "www.bbc.com/sport/:sport"
+            ]
+          }
+        ],
+        "categories": [
+          "traditional-media"
+        ],
+        "location": "sport.ts",
+        "module": "() => import('@/routes/bbc/sport.ts')"
+      },
+      "/zhongwen/topics/:topic/:variant?": {
+        "path": "/zhongwen/topics/:topic/:variant?",
+        "name": "Topics - BBC News 中文",
+        "maintainers": [
+          "TonyRL"
+        ],
+        "example": "/bbc/zhongwen/topics/ckr7mn6r003t",
+        "parameters": {
+          "topic": "The topic ID to fetch news for, can be found in the URL.",
+          "variant": {
+            "description": "The language variant.",
+            "default": "trad",
+            "options": [
+              {
+                "label": "简",
+                "value": "simp"
+              },
+              {
+                "label": "繁",
+                "value": "trad"
+              }
+            ]
+          }
+        },
+        "radar": [
+          {
+            "source": [
+              "www.bbc.com/zhongwen/topics/:topic/:variant"
+            ]
+          }
+        ],
+        "categories": [
+          "traditional-media"
+        ],
+        "location": "topic-zhongwen.ts",
+        "module": "() => import('@/routes/bbc/topic-zhongwen.ts')"
+      },
+      "/topics/:topic": {
+        "path": "/topics/:topic",
+        "name": "Topics",
+        "maintainers": [
+          "TonyRL"
+        ],
+        "example": "/bbc/topics/c77jz3md4rwt",
+        "parameters": {
+          "topic": "The topic ID to fetch news for, can be found in the URL."
+        },
+        "radar": [
+          {
+            "source": [
+              "www.bbc.com/news/topics/:topic"
+            ]
+          }
+        ],
+        "categories": [
+          "traditional-media"
+        ],
+        "location": "topic.ts",
+        "module": "() => import('@/routes/bbc/topic.ts')"
       }
     },
     "name": "BBC",
